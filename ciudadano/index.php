@@ -8,12 +8,12 @@ SELECT COUNT(*) FROM obras
 
 $ejecucion = $conexion->query("
 SELECT COUNT(*) FROM obras
-WHERE estado='En Ejecucion'
+WHERE estado='ACTIVO'
 ")->fetchColumn();
 
 $culminadas = $conexion->query("
 SELECT COUNT(*) FROM obras
-WHERE estado='Culminada'
+WHERE estado='CERRADO' 
 ")->fetchColumn();
 
 $inversion = $conexion->query("

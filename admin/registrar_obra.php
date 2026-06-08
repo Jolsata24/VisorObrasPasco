@@ -85,16 +85,11 @@ class="form-control">
 
 <label>Estado</label>
 
-<select
-name="estado"
-class="form-control">
-
-<option>Planificada</option>
-<option>En Ejecucion</option>
-<option>Paralizada</option>
-<option>Suspendida</option>
-<option>Culminada</option>
-
+<select name="estado" class="form-control">
+    <option>ACTIVO</option>
+    <option>CERRADO</option>
+    <option>INACTIVO</option>
+    <option>VIABLE</option>
 </select>
 
 </div>

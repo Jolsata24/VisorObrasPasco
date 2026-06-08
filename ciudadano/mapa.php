@@ -113,38 +113,12 @@ L.marker([
 .addTo(mapa)
 
 .bindPopup(`
-
-    <div style="min-width:250px;">
-
-        <h6>
-            <?= htmlspecialchars($obra['nombre_obra']) ?>
+    <div style="min-width:250px; max-width:300px;">
+        <h6 style="font-size: 13px; text-transform: capitalize;">
+            <?= htmlspecialchars(strtolower($obra['nombre_obra'])) ?>
         </h6>
-
         <hr>
-
-        <strong>Estado:</strong>
-
-        <?= htmlspecialchars($obra['estado']) ?>
-
-        <br>
-
-        <strong>Avance:</strong>
-
-        <?= $obra['ultimo_avance_fisico'] ?>%
-
-        <br><br>
-
-        <a
-        href="detalle_obra.php?id=<?= $obra['id_obra'] ?>"
-        class="btn btn-sm btn-primary">
-
-        Ver detalle
-
-        </a>
-
-    </div>
-
-`);
+        `) 
 
 <?php } ?>
 
