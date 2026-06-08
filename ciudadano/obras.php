@@ -71,29 +71,16 @@ Buscar
 <tbody>
 
 <?php foreach($obras as $obra){ ?>
-
 <tr>
-
-<td><?= $obra['nombre_obra'] ?></td>
-
-<td><?= $obra['estado'] ?></td>
-
-<td><?= $obra['ultimo_avance_fisico'] ?>%</td>
-
-<td>
-
-<a
-href="detalle_obra.php?id=<?= $obra['id_obra'] ?>"
-class="btn btn-info">
-
-Ver
-
+    <td><?= htmlspecialchars($obra['nombre_obra']) ?></td>
+    <td><?= htmlspecialchars($obra['estado']) ?></td>
+    <td><?= htmlspecialchars($obra['ultimo_avance_fisico']) ?>%</td>
+    <td>
+        <a href="detalle_obra.php?id=<?= $obra['id_obra'] ?>" class="btn btn-info">
+    Ver
 </a>
-
-</td>
-
+    </td>
 </tr>
-
 <?php } ?>
 
 </tbody>
